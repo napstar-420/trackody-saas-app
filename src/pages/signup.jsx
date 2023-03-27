@@ -212,7 +212,7 @@ export default function SignUp() {
                 Confirm Password
               </label>
               <input
-                type='email'
+                type='password'
                 name='c_password'
                 value={cPassword}
                 onChange={(e) => {
