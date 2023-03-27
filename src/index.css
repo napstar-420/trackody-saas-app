@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Open+Sans:wght@300;400&family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    * {
+        @apply font-primary;
+    }
+    .form-label {
+        @apply block mb-2 text-white font-primary font-[450]
+    }
+
+    .form-control {
+        @apply w-full font-secondary text-base font-[500] px-7 py-[0.7rem] outline-none bg-[#1b1b29] focus:bg-[#242435] rounded-lg text-[#9595a3];
+    }
+}
+
+#login_left_side::-webkit-scrollbar {
+    width: 4px;
+}
+
+#login_left_side::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+#login_left_side::-webkit-scrollbar-thumb {
+    background-color: #333;
+}
