@@ -4,11 +4,13 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import './index.css'
 import Login from './pages/login'
 import ErrorPage from './errorPage.jsx'
+import SignUp from './pages/signup'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' errorElement={<ErrorPage />}>
       <Route index element={<Login />}/>
+      <Route path='sign-up' element={<SignUp />}/>
       <Route path='*' element={<ErrorPage />}/>
     </Route>
   )

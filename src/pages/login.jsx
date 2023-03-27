@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import FacebookLogo from '../assets/facebook-logo.png';
 import { BsApple } from 'react-icons/bs';
-import LoginSvg from '../assets/login.svg';
+import WelcomePanel from '../components/welcomePanel';
 
-function Login() {
+export default function Login() {
 
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
@@ -14,19 +14,7 @@ function Login() {
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [emailTouched, setEmailTouched] = useState(false);
-  const [passwordTouched, setPasswordTouched] = useState(false);  
-
-  function handleEmailChange(e) {
-    setEmailTouched(true);
-    const { value } = e.target;
-    setEmail(value);
-  }
-
-  function handlePasswordChange(e) {
-    setPasswordTouched(true);
-    const { value } = e.target;
-    setPassword(value);
-  }
+  const [passwordTouched, setPasswordTouched] = useState(false);
 
   useEffect(() => {
     if (!emailTouched) return;
@@ -47,27 +35,7 @@ function Login() {
 
   return (
     <div className='max-w-screen min-h-screen lg:h-screen grid grid-rows-[auto_1fr] lg:grid-rows-none grid-cols-1 xl:grid-cols-[auto_1fr] lg:grid-cols-[1fr_1fr]'>
-      <div
-        id='login_left_side'
-        className='bg-primary w-full lg:grid place-items-center xl:w-[600px] overflow-y-auto overflow-x-hidden'
-      >
-        <div className='py-6 sm:py-10 lg:px-16 lg:py-16 text-center lg:mt-10'>
-          <h1 className='font-secondary text-4xl font-bold'>
-            <span className='font-[inherit] text-secondary'>Trac</span>
-            <span className='font-[inherit] text-[#333]'>kody</span>
-          </h1>
-          <h2 className='hidden lg:block mt-7 mb-10 text-4xl text-white font-bold'>
-            Welcome to Trackody
-          </h2>
-          <p className='hidden lg:block text-white text-xl font-opensSans font-bold'>
-            The best tracking platform for marketing whales to view performance
-            of campaigns.
-          </p>
-        </div>
-        <div className='hidden lg:flex pt-16 items-center justify-center'>
-          <img src={LoginSvg} alt='login illustration' width='300' />
-        </div>
-      </div>
+      <WelcomePanel />
       <div className='bg-dark h-full overflow-x-hidden overflow-y-auto flex justify-center lg:grid place-items-center pt-10 lg:pt-20 pb-8 px-8'>
         <div className='w-full max-w-[600px] lg:w-[clamp(100%,400px,400px)]'>
           <h1 className='text-white text-2xl font-medium mb-2 text-center'>
@@ -89,7 +57,11 @@ function Login() {
                 type='email'
                 name='email'
                 value={email}
-                onChange={handleEmailChange}
+                onChange={(e) => {
+                  setEmailTouched(true);
+                  const { value } = e.target;
+                  setEmail(value);
+                }}
                 required
                 className='form-control'
               />
@@ -112,7 +84,11 @@ function Login() {
                 type='password'
                 name='assword'
                 value={password}
-                onChange={handlePasswordChange}
+                onChange={(e) => {
+                  setPasswordTouched(true);
+                  const { value } = e.target;
+                  setPassword(value);
+                }}
                 required
                 className='form-control col-start-1 col-end-3'
               />
@@ -169,5 +145,3 @@ function Login() {
     </div>
   );
 }
-
-export default Login;

@@ -12,6 +12,8 @@ module.exports = {
         primary_lighten: '#5ddef0',
         secondary: '#f06445',
         dark: '#151521',
+        dark_text: '#43445f',
+        dark_bg: '#2b2b40',
       },
       fontFamily: {
         primary: ["'Roboto', sans-serif"],

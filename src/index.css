@@ -12,7 +12,7 @@
     }
 
     .form-control {
-        @apply w-full font-secondary text-base font-[500] px-7 py-[0.7rem] outline-none bg-[#1b1b29] focus:bg-[#242435] rounded-lg text-[#9595a3];
+        @apply w-full font-secondary text-base font-[500] px-5 py-[0.7rem] outline-none bg-[#1b1b29] focus:bg-[#242435] rounded-lg text-[#9595a3];
     }
 }
 
