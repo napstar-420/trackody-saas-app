@@ -1,19 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Open+Sans:wght@300;400&family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
     * {
-        @apply font-primary;
+        @apply font-primary
     }
     .form-label {
-        @apply block mb-2 text-white font-primary font-[450]
+        @apply block mb-2 text-light_text dark:text-white font-medium dark:font-[450]
     }
 
     .form-control {
-        @apply w-full font-secondary text-base font-[500] px-5 py-[0.7rem] outline-none bg-[#1b1b29] focus:bg-[#242435] rounded-lg text-[#9595a3];
+        @apply w-full text-base font-[500] px-5 py-[0.7rem] outline-none bg-light_400 focus:bg-light_400_darker dark:bg-dark_500 dark:focus:bg-dark_600_lighter rounded-lg text-light_900 dark:text-dark_100;
     }
+}
+
+#login_left_side {
+    scrollbar-width: none;
 }
 
 #login_left_side::-webkit-scrollbar {
@@ -24,6 +28,10 @@
     background-color: transparent;
 }
 
-#login_left_side::-webkit-scrollbar-thumb {
+.white-scroll::-webkit-scrollbar-thumb {
+    background-color: #fff;
+}
+
+.black-scroll::-webkit-scrollbar-thumb {
     background-color: #333;
 }
