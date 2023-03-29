@@ -20,8 +20,8 @@ function SideNav() {
 
   const btnRef = useRef(null);
   const [style, setStyle] = useState({
-    display: 'block',
-    opacity: 1,
+    display: 'none',
+    opacity: 0,
     top: 0,
     left: 0,
     transform: 'translate(0,0)',
