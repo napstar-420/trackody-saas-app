@@ -98,12 +98,13 @@ export default function Login() {
                 {passwordError}
               </div>
             </div>
-            <button
+            <NavLink
+              to={'/admin/'}
               type='submit'
               className='w-full rounded-lg bg-primary hover:bg-primary_darken text-white  font-medium text-center px-4 py-3 transition-colors'
             >
               Continue
-            </button>
+            </NavLink>
           </form>
           <span className='block my-4 text-light_600 dark:text-dark_300 font-semibold text-[0.8rem] text-center'>
             OR

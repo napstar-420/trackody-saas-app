@@ -14,6 +14,27 @@
     .form-control {
         @apply w-full text-base font-[500] px-5 py-[0.7rem] outline-none bg-light_400 focus:bg-light_400_darker dark:bg-dark_500 dark:focus:bg-dark_600_lighter rounded-lg text-light_900 dark:text-dark_100;
     }
+    .side-nav-link-heading {
+        @apply px-1 py-[10px] rounded-xl grid grid-cols-[auto_1fr_auto] items-center gap-2 font-medium text-light_900 hover:text-light_900_darker cursor-pointer text-lg       
+    }
+    .side-nav-link-heading > :first-child {
+        @apply text-light_600 transition-transform ease-linear duration-300
+    }
+    .side-nav-child-link {
+        @apply px-4 py-[10px] rounded-xl text-sm flex items-center gap-2 font-medium text-light_900 hover:text-light_900_darker cursor-pointer
+    }
+    .side-nav-child-link:hover:not(.side-nav-child-link.active) > :first-child {
+        @apply opacity-0
+    }
+    .side-nav-child-link.active {
+        @apply bg-primary text-white
+    }
+    .side-nav-link {
+        @apply px-1 py-[10px] rounded-2xl grid grid-cols-[auto_1fr_auto] items-center gap-2 font-medium text-light_900 hover:text-light_900_darker cursor-pointer text-lg
+    }
+    .side-nav-link.active {
+        @apply bg-primary text-white
+    }
 }
 
 #login_left_side {
@@ -34,4 +55,12 @@
 
 .black-scroll::-webkit-scrollbar-thumb {
     background-color: #333;
+}
+
+#side-nav::-webkit-scrollbar {
+    width: 3px;
+}
+
+#side-nav::-webkit-scrollbar-thumb {
+    background-color: #dad3c3;
 }

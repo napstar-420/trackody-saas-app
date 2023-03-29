@@ -13,6 +13,7 @@ module.exports = {
         primary_lighten: '#5ddef0',
         secondary: '#f06445',
         light_text: "#211f1c",
+        light_900_darker: "#4a4645",
         light_900: "#716f6e",
         light_800: "#8f8984",
         light_700: "#98856f",
