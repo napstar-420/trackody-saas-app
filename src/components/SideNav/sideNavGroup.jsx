@@ -11,9 +11,9 @@ export default function SideNavGroup({
   setActiveTab,
   expandedTab,
   setExpandedTab,
-  children
+  children,
 }) {
-    
+  console.log(heading);
   function handleTabChange(name) {
     if (expandedTab === name) {
       setExpandedTab(null);
@@ -65,12 +65,11 @@ export default function SideNavGroup({
   );
 }
 
-
 SideNavGroup.propTypes = {
-    heading: PropTypes.string,
-    children: PropTypes.array,
-    expandedTab: PropTypes.string,
-    activeTab: PropTypes.string,
-    setActiveTab: PropTypes.func,
-    setExpandedTab: PropTypes.func,
-}
+  heading: PropTypes.string,
+  children: PropTypes.array,
+  expandedTab: PropTypes.string,
+  activeTab: PropTypes.string,
+  setActiveTab: PropTypes.func,
+  setExpandedTab: PropTypes.func,
+};

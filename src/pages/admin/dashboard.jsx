@@ -3,7 +3,7 @@ import ProfileHeader from '../../components/profileHeader';
 
 export default function Dashboard() {
   return (
-    <div className='px-8 py-8'>
+    <div className='px-8 py-8 h-full overflow-y-auto'>
       <header className='flex justify-between items-center'>
         <div>
           <h2 className='text-lg text-light_text font-semibold'>Dashboard</h2>
