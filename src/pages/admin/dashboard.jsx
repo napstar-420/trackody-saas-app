@@ -1,4 +1,6 @@
 import React from 'react';
+import Channels from '../../components/dasboard/admin/channels';
+import TopAffiliates from '../../components/dasboard/admin/topAffiliates';
 import ProfileHeader from '../../components/profileHeader';
 
 export default function Dashboard() {
@@ -11,6 +13,12 @@ export default function Dashboard() {
         </div>
         <ProfileHeader />
       </header>
+      <main className='py-8'>
+        <div className='grid grid-cols-2 gap-4'>
+          <Channels />
+          <TopAffiliates />
+        </div>
+      </main>
     </div>
   );
 }
