@@ -1,11 +1,11 @@
 import React from 'react';
-import Campaigns from '../../components/dasboard/admin/campaigns';
-import Channels from '../../components/dasboard/admin/channels';
-import ExternalLinks from '../../components/dasboard/admin/externalLinks';
-import HighLights from '../../components/dasboard/admin/highLights';
-import KeyStatistics from '../../components/dasboard/admin/keyStatistics';
-import PerformanceOverview from '../../components/dasboard/admin/performanceOverview';
-import TopAffiliates from '../../components/dasboard/admin/topAffiliates';
+import Campaigns from '../../components/dashboard/admin/campaigns';
+import Channels from '../../components/dashboard/admin/channels';
+import ExternalLinks from '../../components/dashboard/admin/externalLinks';
+import HighLights from '../../components/dashboard/admin/highLights';
+import KeyStatistics from '../../components/dashboard/admin/keyStatistics';
+import PerformanceOverview from '../../components/dashboard/admin/performanceOverview';
+import TopAffiliates from '../../components/dashboard/admin/topAffiliates';
 import ProfileHeader from '../../components/profileHeader';
 
 export default function Dashboard() {
