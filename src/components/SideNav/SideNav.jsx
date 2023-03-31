@@ -9,7 +9,7 @@ export default function SideNav({ children }) {
   const [expandedTab, setExpandedTab] = useState(null);
 
   return (
-    <div className='w-72 h-full bg-light_400 flex flex-col'>
+    <div className='w-72 absolute -left-72 lg:static h-full bg-light_400 flex flex-col'>
       <NavHeader />
       <ul
         id='side-nav'

@@ -2,13 +2,13 @@ import React from 'react';
 
 export default function PerformanceOverview() {
   return (
-    <div className='row-start-1 row-end-3 bg-[#fdfcfb] border border-dashed px-8 py-4 rounded-xl'>
+    <div className='sm:col-start-1 sm:col-end-3 xl:col-end-2 xl:row-start-1 xl:row-end-3 bg-[#fdfcfb] border border-dashed px-8 py-4 rounded-xl'>
       <div className='flex justify-between items-center'>
         <div>
-          <h2 className='text-xl text-light_text font-semibold'>
+          <h2 className='text-lg text-light_text font-semibold'>
             Performance Overview
           </h2>
-          <p className='text-light_800'>Users from all channels</p>
+          <p className='text-light_800 text-sm'>Users from all channels</p>
         </div>
         <div className='flex gap-1'>
           <button className='text-light_800 px-4 py-2 rounded-xl text-sm'>

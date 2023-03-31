@@ -13,7 +13,6 @@ export default function SideNavGroup({
   setExpandedTab,
   children,
 }) {
-  console.log(heading);
   function handleTabChange(name) {
     if (expandedTab === name) {
       setExpandedTab(null);

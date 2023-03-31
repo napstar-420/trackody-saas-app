@@ -5,7 +5,7 @@ import { links } from './navLinks';
 
 export default function Root() {
   return (
-    <div className='grid w-full h-screen grid-cols-[auto_1fr]'>
+    <div className='grid md:grid-cols-[auto_1fr] w-full h-screen'>
       <SideNav>{links}</SideNav>
       <Outlet />
     </div>

@@ -64,3 +64,11 @@
 #side-nav::-webkit-scrollbar-thumb {
   background-color: #dad3c3;
 }
+
+#campaign-wrapper::-webkit-scrollbar {
+  height: 4px;
+}
+
+#campaign-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ebe5d6;
+}

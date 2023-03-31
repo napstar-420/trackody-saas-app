@@ -9,6 +9,7 @@ module.exports = {
         primary_darken: '#37aebe',
         primary_lighten: '#5ddef0',
         secondary: '#f06445',
+        secondary_darken: '#d45235',
         theme_green: '#b8d935',
         light_text: '#211f1c',
         light_900_darker: '#4a4645',
