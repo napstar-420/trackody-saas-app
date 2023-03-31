@@ -14,7 +14,7 @@ export function ThemeToggleBtn({ opened, setOpened }) {
       >
         <BsFillSunFill />
       </button>
-      <ThemeToggler opened={opened} />
+      <ThemeToggler opened={opened} setOpened={setOpened} />
     </>
   );
 }
@@ -24,14 +24,16 @@ ThemeToggleBtn.propTypes = {
   setOpened: PropTypes.func,
 };
 
-function ThemeToggler({ opened }) {
+function ThemeToggler({ opened, setOpened }) {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <AnimatePresence>
       {opened === 'TT' && (
         <motion.div
-          className='bg-white p-3 shadow-2xl absolute w-44 top-14 left-24 rounded-xl flex flex-col gap-2'
+          onMouseEnter={() => setOpened('TT')}
+          onMouseLeave={() => setOpened('')}
+          className='bg-white p-3 shadow-2xl absolute w-44 top-10 left-24 rounded-xl flex flex-col gap-2'
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0, transitionTimingFunction: 'ease' }}
           exit={{ opacity: 0, y: 20 }}
@@ -67,4 +69,5 @@ function ThemeToggler({ opened }) {
 
 ThemeToggler.propTypes = {
   opened: PropTypes.string,
+  setOpened: PropTypes.func,
 };
