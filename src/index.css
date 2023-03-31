@@ -35,6 +35,9 @@
   .side-nav-link.active {
     @apply bg-primary text-white;
   }
+  .bubble-chart-tick {
+    @apply font-primary text-light_600 text-base;
+  }
 }
 
 #login_left_side {

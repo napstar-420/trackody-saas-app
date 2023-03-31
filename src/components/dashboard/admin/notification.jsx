@@ -27,7 +27,7 @@ function NotificationTab({ opened }) {
     <AnimatePresence>
       {opened === 'NT' && (
         <motion.div
-          className='absolute w-80 top-12 transition-all bg-white rounded-xl overflow-hidden shadow-2xl'
+          className='absolute w-80 top-12 z-10 transition-all bg-white rounded-xl overflow-hidden shadow-2xl'
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0, transitionTimingFunction: 'ease' }}
           exit={{ opacity: 0, y: 20 }}

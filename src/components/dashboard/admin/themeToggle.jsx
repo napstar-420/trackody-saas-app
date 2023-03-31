@@ -33,7 +33,7 @@ function ThemeToggler({ opened, setOpened }) {
         <motion.div
           onMouseEnter={() => setOpened('TT')}
           onMouseLeave={() => setOpened('')}
-          className='bg-white p-3 shadow-2xl absolute w-44 top-10 left-24 rounded-xl flex flex-col gap-2'
+          className='bg-white p-3 shadow-2xl z-10 absolute w-44 top-10 left-24 rounded-xl flex flex-col gap-2'
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0, transitionTimingFunction: 'ease' }}
           exit={{ opacity: 0, y: 20 }}

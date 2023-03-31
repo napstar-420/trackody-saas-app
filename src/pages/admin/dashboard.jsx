@@ -19,8 +19,8 @@ export default function Dashboard() {
         <ProfileHeader />
       </header>
       <main className='py-8 grid gap-4'>
-        <div className='grid sm:grid-cols-2 xl:grid-cols-[2.5fr_1fr] grid-rows-[auto_auto] gap-4'>
-          <PerformanceOverview />
+        <PerformanceOverview />
+        <div className='grid grid-cols-[repeat(auto-fit,_minmax(450px,1fr))] gap-4'>
           <HighLights />
           <ExternalLinks />
         </div>

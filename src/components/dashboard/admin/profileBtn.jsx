@@ -47,7 +47,7 @@ function ProfileOverview({ opened, setOpened }) {
         <motion.div
           onMouseEnter={() => setOpened('PROFILE')}
           onMouseLeave={() => setOpened('')}
-          className='w-72 bg-white absolute top-10 right-0 shadow-2xl rounded-2xl'
+          className='w-72 bg-white absolute z-10 top-10 right-0 shadow-2xl rounded-2xl'
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0, transitionTimingFunction: 'ease' }}
           exit={{ opacity: 0, y: 20 }}

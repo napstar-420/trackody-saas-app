@@ -51,7 +51,7 @@ function QuickLinks({ opened }) {
     <AnimatePresence>
       {opened === 'QL' && (
         <motion.div
-          className='absolute w-80 transition-all bg-white rounded-xl overflow-hidden shadow-2xl'
+          className='absolute w-80 z-10 transition-all bg-white rounded-xl overflow-hidden shadow-2xl'
           style={{ left: 0, top: 50 }}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0, transitionTimingFunction: 'ease' }}
