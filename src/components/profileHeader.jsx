@@ -4,6 +4,7 @@ import { HiChatBubbleBottomCenterText } from 'react-icons/hi2';
 import { IoLogOutOutline } from 'react-icons/io5';
 import { QuickLinksBtn } from './dashboard/admin/quickLinks';
 import { ThemeToggleBtn } from './dashboard/admin/themeToggle.jsx';
+import { NotificationBtn } from './dashboard/admin/notification.jsx';
 
 export default function ProfileHeader() {
   const [opened, setOpened] = useState('');
@@ -15,9 +16,7 @@ export default function ProfileHeader() {
         <HiChatBubbleBottomCenterText />
       </button>
       <ThemeToggleBtn opened={opened} setOpened={setOpened} />
-      <button className='px-[14px] py-1 text-2xl text-white bg-primary hover:bg-primary_darken rounded-xl transition-colors'>
-        3
-      </button>
+      <NotificationBtn opened={opened} setOpened={setOpened} />
       <div className='flex gap-2 items-center'>
         <div
           className='w-10 h-10 rounded-lg bg-cover bg-center cursor-pointer'
