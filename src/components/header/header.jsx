@@ -22,7 +22,7 @@ export default function Header({ children }) {
           >
             <GiHamburgerMenu />
           </button>
-          <NavLink to={'/'} className='text-2xl font-bold'>
+          <NavLink to={'/'} className='hidden sm:block text-2xl font-bold'>
             <span className='text-light_text'>Trac</span>
             <span className='text-secondary'>kody</span>
           </NavLink>

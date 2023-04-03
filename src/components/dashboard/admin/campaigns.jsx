@@ -193,9 +193,9 @@ export default function Campaigns() {
 
   return (
     <div className='bg-[#fdfcfb] border w-full border-dashed px-8 py-4 rounded-xl h-max'>
-      <div className='flex justify-between items-center flex-wrap gap-4'>
+      <div className='flex justify-between items-center flex-wrap gap-2 md:gap-4'>
         <CampaignNav selected={selected} setSelected={setSelected} />
-        <button className='bg-secondary px-4 py-2 text-white rounded-xl hover:bg-secondary_darken transition-colors'>
+        <button className='text-sm sm:text-base lg:text-lg bg-secondary px-4 py-2 text-white rounded-xl hover:bg-secondary_darken transition-colors'>
           Create Campaign
         </button>
       </div>
@@ -306,16 +306,16 @@ function CampaignNav({ selected, setSelected }) {
     },
   ];
   return (
-    <div className='pt-4 flex gap-8'>
+    <div className='pt-4 flex flex-wrap gap-4 md:gap-8'>
       {navButtons.map((btn, index) => {
         const { name, n } = btn;
         return (
           <button
             key={index}
             onClick={() => setSelected(name)}
-            className={`text-lg border-b-4  pb-3 ${
+            className={`text-sm sm:text-base lg:text-lg border-b-4  pb-3 ${
               selected === name
-                ? 'font-[550]text-light_text border-primary'
+                ? 'font-[550] text-light_text border-primary'
                 : 'text-light_800 border-transparent'
             }`}
           >
@@ -335,7 +335,7 @@ CampaignNav.propTypes = {
 function Filter() {
   return (
     <div className='flex items-center flex-wrap gap-4 justify-between mt-8 border-b border-dashed pb-6'>
-      <div className='flex items-center gap-x-10 gap-y-2 flex-wrap'>
+      <div className='flex items-center gap-x-4 md:gap-x-10 gap-y-2 flex-wrap'>
         <div className='flex items-center gap-3 text-sm'>
           <span className='text-light_800'>Type</span>
           <button className='flex items-center gap-2 text-light_text font-medium'>

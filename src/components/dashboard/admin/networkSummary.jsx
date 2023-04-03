@@ -178,7 +178,7 @@ export function NetworkSummary() {
   return (
     <div className='bg-[#fdfcfb] border border-dashed py-4 rounded-xl px-8'>
       <h2 className='text-lg text-light_text font-semibold'>Network Summary</h2>
-      <div className='py-4 grid grid-cols-4'>
+      <div className='py-4 grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] xl:grid-cols-4'>
         {summary.map((network, index) => {
           const { label, value, change, period } = network;
           return (
