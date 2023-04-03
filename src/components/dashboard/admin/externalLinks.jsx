@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 export default function ExternalLinks() {
   return (
-    <div className='bg-[#fdfcfb] border border-dashed px-8 py-4 rounded-xl h-max'>
+    <div className='bg-[#fdfcfb] border border-dashed px-8 py-4 rounded-xl'>
       <h2 className='text-[1.1rem] text-light_text font-semibold'>
         External Links
       </h2>

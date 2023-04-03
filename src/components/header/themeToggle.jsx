@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { BsFillSunFill, BsMoonStarsFill } from 'react-icons/bs';
-import ThemeContext from '../../../themeContext';
+import ThemeContext from '../../themeContext';
 import { AnimatePresence, motion } from 'framer-motion';
 
 export function ThemeToggleBtn({ opened, setOpened }) {

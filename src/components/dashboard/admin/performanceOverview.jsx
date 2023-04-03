@@ -4,20 +4,26 @@ import Chart from 'react-apexcharts';
 export default function PerformanceOverview() {
   const bubbleColors = ['#4fc9da', '#b8d935', '#e8c444', '#f06445', '#4f55da'];
   const options = {
+    chart: {
+      type: 'bubble',
+      toolbar: {
+        show: false,
+      },
+    },
     legend: {
       position: 'bottom',
-      offsetY: 30,
+      offsetY: 5,
       fontFamily: 'Exo 2, sans-serif',
       fontSize: '14px',
       fontWeight: 600,
-      padding: 12,
+      padding: 0,
       horizontalAlign: 'left',
       markers: {
         offsetX: -5,
         offsetY: 0,
       },
       itemMargin: {
-        horizontal: 16,
+        horizontal: 15,
         vertical: 0,
       },
       onItemClick: {
@@ -29,17 +35,38 @@ export default function PerformanceOverview() {
       },
     },
     colors: bubbleColors,
-    chart: {
-      type: 'bubble',
-      toolbar: {
-        show: false,
-      },
-    },
     dataLabels: {
       enabled: false,
     },
     tooltip: {
-      show: true,
+      enabled: true,
+      custom: function ({ seriesIndex, dataPointIndex, w }) {
+        const { series } = w.config;
+        const valueX = series[seriesIndex].data[dataPointIndex][0];
+        const valueY = series[seriesIndex].data[dataPointIndex][0];
+        const valueZ = series[seriesIndex].data[dataPointIndex][0];
+        return `
+        <div class="performance-chart-tooltip">
+          <div class="tooltip-title">Clicks: ${valueX}</div>
+          <div class="tooltip-body">
+          <p>${series[seriesIndex].name}: <span>$${valueY}K<span></p>
+          <p>Impression: <span>${valueZ}</span></p>
+          </div>
+        </div>`;
+      },
+      x: {
+        formatter: function (val) {
+          return 'Clicks: ' + val;
+        },
+      },
+      y: {
+        formatter: function (val) {
+          return '$' + val + 'K';
+        },
+      },
+      z: {
+        title: 'Impression: ',
+      },
     },
     fill: {
       opacity: 1,
@@ -67,9 +94,9 @@ export default function PerformanceOverview() {
       },
     },
     yaxis: {
-      max: 700,
+      max: 600,
       min: 0,
-      tickAmount: 7,
+      tickAmount: 5,
       labels: {
         style: {
           colors: '#8f8984',
@@ -107,7 +134,7 @@ export default function PerformanceOverview() {
   ];
 
   return (
-    <div className='bg-[#fdfcfb] border border-dashed py-4 rounded-xl'>
+    <div className='bg-[#fdfcfb] h-full border border-dashed py-4 pb-0 rounded-xl'>
       <div className='flex justify-between items-center px-8'>
         <div>
           <h2 className='text-lg text-light_text font-semibold'>
@@ -124,7 +151,7 @@ export default function PerformanceOverview() {
           </button>
         </div>
       </div>
-      <div className='py-6 px-8'>
+      <div className='py-6 pb-2 px-8'>
         <div className='flex items-center gap-1'>
           <span className='text-light_600 text-2xl font-medium self-start mt-1'>
             $
@@ -138,8 +165,16 @@ export default function PerformanceOverview() {
           Average cost per interaction
         </p>
       </div>
-      <div className='text-4xl text-center pb-4 text-light_800 px-3'>
-        <Chart options={options} series={series} type='bubble' width={'100%'} />
+      <div
+        id='performance-chart'
+        className='text-4xl text-center text-light_800 px-3'
+      >
+        <Chart
+          options={options}
+          series={series}
+          type='bubble'
+          height={'350px'}
+        />
       </div>
     </div>
   );

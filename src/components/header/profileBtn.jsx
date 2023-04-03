@@ -17,7 +17,7 @@ export function ProfileBtn({ opened, setOpened }) {
               'url(https://i.pinimg.com/originals/3e/2e/8c/3e2e8c6fa626636eb4e8bdfe78edab3b.jpg)',
           }}
         ></div>
-        <div>
+        <div className='hidden md:block'>
           <NavLink
             to={'/admin/profile'}
             className='text-light_text hover:text-primary'
@@ -26,7 +26,7 @@ export function ProfileBtn({ opened, setOpened }) {
           </NavLink>
           <p className='text-sm text-light_500'>Actress</p>
         </div>
-        <button className='ml-10 text-2xl text-light_700 hover:text-light_900_darker'>
+        <button className='hidden md:block ml-10 text-2xl text-light_700 hover:text-light_900_darker'>
           <IoLogOutOutline />
         </button>
       </div>

@@ -6,7 +6,7 @@ import {
 
 export default function HighLights() {
   return (
-    <div className='bg-[#fdfcfb] border border-dashed px-8 py-4 rounded-xl h-max'>
+    <div className='bg-[#fdfcfb] border border-dashed px-8 py-4 rounded-xl'>
       <h2 className='text-[1.1rem] text-light_text font-semibold'>
         Highlights
       </h2>
