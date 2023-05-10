@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { IoLogOutOutline } from 'react-icons/io5';
 import { AnimatePresence, motion } from 'framer-motion';
 
 export function ProfileBtn({ opened, setOpened }) {
   return (
     <>
-      <div className='flex gap-2 items-center'>
+      <div
+        onMouseEnter={() => setOpened('PROFILE')}
+        onMouseLeave={() => setOpened('')}
+        className='flex gap-2 items-center cursor-pointer'
+      >
         <div
-          onMouseEnter={() => setOpened('PROFILE')}
-          onMouseLeave={() => setOpened('')}
-          className='w-10 h-10 rounded-lg bg-cover bg-center cursor-pointer'
+          className='w-10 h-10 rounded-lg bg-cover bg-center'
           style={{
             backgroundImage:
               'url(https://i.pinimg.com/originals/3e/2e/8c/3e2e8c6fa626636eb4e8bdfe78edab3b.jpg)',
@@ -20,15 +21,12 @@ export function ProfileBtn({ opened, setOpened }) {
         <div className='hidden md:block'>
           <NavLink
             to={'/admin/profile'}
-            className='text-light_text hover:text-primary'
+            className='text-light_text dark:text-white dark:hover:text-primary hover:text-primary'
           >
             Kristen Stewart
           </NavLink>
-          <p className='text-sm text-light_500'>Actress</p>
+          <p className='text-sm text-slate-500 dark:text-dark_200'>Actress</p>
         </div>
-        <button className='hidden md:block ml-10 text-2xl text-light_700 hover:text-light_900_darker'>
-          <IoLogOutOutline />
-        </button>
       </div>
       <ProfileOverview opened={opened} setOpened={setOpened} />
     </>
@@ -47,7 +45,7 @@ function ProfileOverview({ opened, setOpened }) {
         <motion.div
           onMouseEnter={() => setOpened('PROFILE')}
           onMouseLeave={() => setOpened('')}
-          className='w-72 bg-white absolute z-10 top-10 right-0 shadow-2xl rounded-2xl'
+          className='w-72 bg-white absolute z-10 top-12 right-0 shadow-2xl rounded-2xl'
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0, transitionTimingFunction: 'ease' }}
           exit={{ opacity: 0, y: 20 }}

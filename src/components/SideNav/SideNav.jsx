@@ -13,7 +13,7 @@ export default function SideNav({ children, isNavOpen, setIsNavOpen }) {
       <div
         className={`w-72 absolute z-20 transition-all ${
           isNavOpen ? 'left-0' : '-left-72'
-        } lg:static h-full bg-light_400 flex flex-col`}
+        } lg:static h-full bg-light_400 dark:bg-dark_500 flex flex-col`}
       >
         <NavHeader />
         <ul

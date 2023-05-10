@@ -10,7 +10,7 @@ export function ThemeToggleBtn({ opened, setOpened }) {
       <button
         onMouseEnter={() => setOpened('TT')}
         onMouseLeave={() => setOpened('')}
-        className='p-2 text-2xl border rounded-xl text-zinc-300 hover:text-primary hover:border-primary transition-colors'
+        className='p-2 text-2xl border rounded-xl text-zinc-300 dark:text-dark_300 dark:border-dark_300 hover:text-primary hover:border-primary dark:hover:text-primary dark:hover:border-primary transition-colors'
       >
         <BsFillSunFill />
       </button>
@@ -33,7 +33,7 @@ function ThemeToggler({ opened, setOpened }) {
         <motion.div
           onMouseEnter={() => setOpened('TT')}
           onMouseLeave={() => setOpened('')}
-          className='bg-white p-3 shadow-2xl z-10 absolute w-44 top-10 left-24 rounded-xl flex flex-col gap-2'
+          className='bg-white p-3 shadow-2xl z-10 absolute w-44 top-12 left-24 rounded-xl flex flex-col gap-2'
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0, transitionTimingFunction: 'ease' }}
           exit={{ opacity: 0, y: 20 }}

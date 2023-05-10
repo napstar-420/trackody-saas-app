@@ -26,7 +26,7 @@ export default function SideNavGroup({
       <h2
         className={`${
           activeTab === heading
-            ? 'side-nav-link-heading text-light_text'
+            ? 'side-nav-link-heading text-light_text dark:text-gray-100'
             : 'side-nav-link-heading'
         }`}
         onClick={() => handleTabChange(heading)}

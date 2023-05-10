@@ -8,7 +8,7 @@ export function QuickLinksBtn({ opened, setOpened }) {
   return (
     <>
       <button
-        className='p-2 text-2xl border rounded-xl text-zinc-300 hover:text-primary hover:border-primary transition-colors'
+        className='p-2 text-2xl border rounded-xl text-zinc-300 dark:text-dark_300 dark:border-dark_300 hover:text-primary hover:border-primary dark:hover:text-primary dark:hover:border-primary transition-colors'
         onClick={() => setOpened(opened === 'QL' ? '' : 'QL')}
       >
         <BsGridFill />
@@ -51,8 +51,7 @@ function QuickLinks({ opened }) {
     <AnimatePresence>
       {opened === 'QL' && (
         <motion.div
-          className='absolute w-80 z-10 transition-all bg-white rounded-xl overflow-hidden shadow-2xl'
-          style={{ left: 0, top: 50 }}
+          className='absolute w-80 z-10 top-12 left-0 transition-all bg-white rounded-xl overflow-hidden shadow-2xl'
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0, transitionTimingFunction: 'ease' }}
           exit={{ opacity: 0, y: 20 }}

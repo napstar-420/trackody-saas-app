@@ -8,7 +8,7 @@ export function NotificationBtn({ opened, setOpened }) {
     <>
       <button
         onClick={() => setOpened(opened === 'NT' ? '' : 'NT')}
-        className='px-[14px] py-1 text-2xl text-white bg-primary hover:bg-primary_darken rounded-xl transition-colors'
+        className='px-[15px] py-[6px] text-xl text-white bg-primary hover:bg-primary_darken rounded-xl transition-colors'
       >
         3
       </button>

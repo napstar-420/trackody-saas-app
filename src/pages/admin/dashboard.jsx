@@ -11,11 +11,15 @@ import { NetworkSummary } from '../../components/dashboard/admin/networkSummary.
 
 export default function Dashboard() {
   return (
-    <div className='px-4 py-4 lg:px-8 lg:py-8 h-full col-start-1 col-end-3 md:col-start-2 overflow-y-auto'>
+    <div className='dark:bg-dark_600 px-4 py-4 lg:px-8 lg:py-8 h-full col-start-1 col-end-3 md:col-start-2 overflow-y-auto'>
       <Header>
         <div>
-          <h2 className='text-lg text-light_text font-semibold'>Dashboard</h2>
-          <p className='text-light_600'>You&apos;ve got 24 new sales</p>
+          <h2 className='text-lg text-light_text dark:text-white font-semibold'>
+            Dashboard
+          </h2>
+          <p className='text-light_600 dark:text-dark_200'>
+            You&apos;ve got 24 new sales
+          </p>
         </div>
       </Header>
       <main className='py-4 lg:py-8 grid gap-4'>

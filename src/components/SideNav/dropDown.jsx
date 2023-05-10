@@ -55,7 +55,7 @@ export default function DropDown() {
             transform: 'translate(0,20px)',
           });
         }}
-        className='text-light_600 hover:text-primary'
+        className='text-light_600 dark:text-dark_200 hover:text-primary'
       >
         <AiTwotoneSetting />
       </button>

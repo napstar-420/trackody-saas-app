@@ -18,19 +18,19 @@ export default function Header({ children }) {
         <div className='lg:hidden flex items-center gap-2'>
           <button
             onClick={() => setIsNavOpen(true)}
-            className='text-xl text-light_600 hover:text-primary'
+            className='text-xl text-light_600 dark:text-dark_300 dark:hover:text-primary hover:text-primary'
           >
             <GiHamburgerMenu />
           </button>
           <NavLink to={'/'} className='hidden sm:block text-2xl font-bold'>
-            <span className='text-light_text'>Trac</span>
+            <span className='text-light_text dark:text-white'>Trac</span>
             <span className='text-secondary'>kody</span>
           </NavLink>
         </div>
         <div className='hidden lg:block'>{children}</div>
-        <div className='flex gap-2 items-center relative'>
+        <div className='flex gap-2 h-11 relative'>
           <QuickLinksBtn opened={opened} setOpened={setOpened} />
-          <button className='p-2 text-2xl border rounded-xl text-zinc-300 hover:text-primary hover:border-primary transition-colors'>
+          <button className='p-2 text-2xl border rounded-xl text-zinc-300 dark:text-dark_300 dark:border-dark_300 hover:text-primary hover:border-primary dark:hover:text-primary dark:hover:border-primary transition-colors'>
             <HiChatBubbleBottomCenterText />
           </button>
           <ThemeToggleBtn opened={opened} setOpened={setOpened} />
