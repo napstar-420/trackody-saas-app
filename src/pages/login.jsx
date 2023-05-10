@@ -40,12 +40,12 @@ export default function Login() {
   return (
     <div className={`${theme} max-w-screen min-h-screen lg:h-screen grid grid-rows-[auto_1fr] lg:grid-rows-none grid-cols-1 xl:grid-cols-[auto_1fr] lg:grid-cols-[1fr_1fr]`}>
       <WelcomePanel />
-      <div className='bg-white dark:bg-dark_600 h-full overflow-x-hidden overflow-y-auto flex justify-center lg:grid place-items-center pt-10 lg:pt-20 pb-8 px-8'>
+      <div className='bg-white h-full overflow-x-hidden overflow-y-auto flex justify-center lg:grid place-items-center pt-10 lg:pt-20 pb-8 px-8'>
         <div className='w-full max-w-[600px] lg:w-[clamp(100%,400px,400px)]'>
-          <h1 className='text-light_text dark:text-white text-2xl font-medium mb-2 text-center'>
+          <h1 className='text-2xl font-medium mb-2 text-center'>
             Sign in to Trackody
           </h1>
-          <p className='text-light_600 dark:text-dark_300 font-medium mb-8 text-center'>
+          <p className='font-medium mb-8 text-center'>
             New Here?{' '}
             <NavLink to={'/sign-up'} className='text-primary font-medium'>
               Create an Account
@@ -106,19 +106,19 @@ export default function Login() {
               Continue
             </NavLink>
           </form>
-          <span className='block my-4 text-light_600 dark:text-dark_300 font-semibold text-[0.8rem] text-center'>
+          <span className='block my-4 font-semibold text-[0.8rem] text-center'>
             OR
           </span>
           <div className='flex flex-col w-full gap-4'>
-            <button className='bg-light_400 dark:bg-dark_400 hover:bg-light_400_darker dark:hover:bg-dark_400_lighter text-light_800 dark:text-dark_200 px-4 py-[0.65rem] rounded-lg flex items-center justify-center gap-[10px] transition-colors'>
+            <button className='px-4 py-[0.65rem] rounded-lg flex items-center justify-center gap-[10px] transition-colors'>
               <FcGoogle className='text-2xl' />
               Continue with Google
             </button>
-            <button className='bg-light_400 dark:bg-dark_400 hover:bg-light_400_darker dark:hover:bg-dark_400_lighter text-light_800 dark:text-dark_200 px-4 py-[0.65rem] rounded-lg flex items-center justify-center gap-[10px] transition-colors'>
+            <button className='px-4 py-[0.65rem] rounded-lg flex items-center justify-center gap-[10px] transition-colors'>
               <img src={FacebookLogo} alt='logo' className='w-[24px]' />
               Continue with Facebook
             </button>
-            <button className='bg-light_400 dark:bg-dark_400 hover:bg-light_400_darker dark:hover:bg-dark_400_lighter text-light_800 dark:text-dark_200 px-4 py-[0.65rem] rounded-lg flex items-center justify-center gap-[10px] transition-colors'>
+            <button className='px-4 py-[0.65rem] rounded-lg flex items-center justify-center gap-[10px] transition-colors'>
               <BsApple className='text-2xl text-black' />
               Continue with Apple
             </button>
