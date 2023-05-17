@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ThemeContext from './themeContext';
+import PropTypes from 'prop-types';
 
 // Define your theme values
 const themes = {
@@ -41,6 +42,10 @@ function ThemeProvider(props) {
       {props.children}
     </ThemeContext.Provider>
   );
+}
+
+ThemeProvider.propTypes = {
+  children: PropTypes.elementType,
 }
 
 export default ThemeProvider;

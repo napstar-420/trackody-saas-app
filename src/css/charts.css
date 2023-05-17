@@ -1,0 +1,50 @@
+.apexcharts-tooltip.apexcharts-theme-light {
+    border-radius: 10px;
+    border: none !important;
+    box-shadow: 0px 0px 50px 0px #cacaca83;
+  }
+  .apexcharts-tooltip.apexcharts-theme-light > .apexcharts-tooltip-title {
+    background-color: #fff !important;
+    border-bottom: 1px solid #666;
+    font-size: 0.8rem !important;
+    font-family: 'Exo 2', sans-serif;
+    color: #1d1d1d;
+  }
+  .apexcharts-tooltip-series-group.apexcharts-active {
+    color: #333 !important;
+  }
+  .apexcharts-xaxistooltip.apexcharts-xaxistooltip-bottom.apexcharts-theme-light {
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 30px 0px #cacaca83;
+  }
+  
+  .performance-chart-tooltip {
+    border-radius: 10px;
+  }
+  
+  .performance-chart-tooltip > .tooltip-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: left;
+    color: #5e5e5e;
+    height: 2.1rem;
+    padding: 0rem 1rem;
+    border-bottom: #cacaca83 1px solid;
+    position: relative;
+    bottom: 0.3rem;
+  }
+  .performance-chart-tooltip > .tooltip-body {
+    padding-bottom: 0.25rem;
+  }
+  .performance-chart-tooltip > .tooltip-body > p {
+    line-height: 1rem;
+    padding: 0.25rem 1rem;
+    text-align: left;
+  }
+  .performance-chart-tooltip > .tooltip-body > p > span {
+    margin-left: 0.5rem;
+    color: #5e5e5e;
+    font-weight: 800;
+  }

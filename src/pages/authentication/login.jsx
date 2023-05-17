@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
-import FacebookLogo from '../assets/facebook-logo.png';
+import FacebookLogo from '../../assets/facebook-logo.png';
 import { BsApple } from 'react-icons/bs';
-import WelcomePanel from '../components/welcomePanel';
-import AuthFooter from '../components/authFooter';
-import ThemeContext from '../themeContext';
+import WelcomePanel from '../../components/welcomePanel';
+import AuthFooter from '../../components/authFooter';
+import ThemeContext from '../../themeContext';
 
 export default function Login() {
 
@@ -40,18 +40,18 @@ export default function Login() {
   return (
     <div className={`${theme} max-w-screen min-h-screen lg:h-screen grid grid-rows-[auto_1fr] lg:grid-rows-none grid-cols-1 xl:grid-cols-[auto_1fr] lg:grid-cols-[1fr_1fr]`}>
       <WelcomePanel />
-      <div className='bg-white h-full overflow-x-hidden overflow-y-auto flex justify-center lg:grid place-items-center pt-10 lg:pt-20 pb-8 px-8'>
+      <div className='bg-theme-100 h-full overflow-x-hidden overflow-y-auto flex justify-center lg:grid place-items-center pb-8 px-8'>
         <div className='w-full max-w-[600px] lg:w-[clamp(100%,400px,400px)]'>
-          <h1 className='text-2xl font-medium mb-2 text-center'>
+          <h1 className='text-2xl text-theme-900 font-medium mb-2 text-center'>
             Sign in to Trackody
           </h1>
-          <p className='font-medium mb-8 text-center'>
+          <p className='font-medium mb-8 text-center text-theme-600'>
             New Here?{' '}
-            <NavLink to={'/sign-up'} className='text-primary font-medium'>
+            <NavLink to={'/sign-up'} className='text-theme-blue-400 font-medium'>
               Create an Account
             </NavLink>
           </p>
-          <form action='' method='post' className='grid gap-8'>
+          <form action='' method='post' className='grid gap-7'>
             {/* Email */}
             <div>
               <label htmlFor='email' className='form-label'>
@@ -62,7 +62,7 @@ export default function Login() {
                 name='email'
                 value={email}
                 required
-                className={`form-control ${emailError ? 'outline outline-red-500' : ''}`}
+                className={`form-control ${emailError && 'outline outline-red-500'}`}
                 onChange={(e) => {
                   setEmailTouched(true);
                   const { value } = e.target;
@@ -77,7 +77,7 @@ export default function Login() {
               </label>
               <NavLink
                 to={'/forgot-password'}
-                className='text-right text-primary hover:text-primary_lighten font-[500]'
+                className='text-right text-sm text-theme-blue-400 hover:text-theme-blue-300 font-[500]'
               >
                 Forgot Password?
               </NavLink>
@@ -101,24 +101,24 @@ export default function Login() {
             <NavLink
               to={'/admin/'}
               type='submit'
-              className='w-full rounded-lg bg-primary hover:bg-primary_darken text-white  font-medium text-center px-4 py-3 transition-colors'
+              className='w-full rounded-lg bg-theme-blue-400 hover:bg-theme-blue-500 text-white font-medium text-center px-4 py-[0.6rem] transition-colors'
             >
               Continue
             </NavLink>
           </form>
-          <span className='block my-4 font-semibold text-[0.8rem] text-center'>
+          <span className='block text-theme-600 my-4 font-semibold text-[0.7rem] text-center'>
             OR
           </span>
           <div className='flex flex-col w-full gap-4'>
-            <button className='px-4 py-[0.65rem] rounded-lg flex items-center justify-center gap-[10px] transition-colors'>
+            <button className='bg-theme-400 text-theme-600 px-4 py-[0.65rem] rounded-lg flex items-center justify-center gap-[10px] transition-colors'>
               <FcGoogle className='text-2xl' />
               Continue with Google
             </button>
-            <button className='px-4 py-[0.65rem] rounded-lg flex items-center justify-center gap-[10px] transition-colors'>
+            <button className='bg-theme-400 text-theme-600 px-4 py-[0.65rem] rounded-lg flex items-center justify-center gap-[10px] transition-colors'>
               <img src={FacebookLogo} alt='logo' className='w-[24px]' />
               Continue with Facebook
             </button>
-            <button className='px-4 py-[0.65rem] rounded-lg flex items-center justify-center gap-[10px] transition-colors'>
+            <button className='bg-theme-400 text-theme-600 px-4 py-[0.65rem] rounded-lg flex items-center justify-center gap-[10px] transition-colors'>
               <BsApple className='text-2xl text-black' />
               Continue with Apple
             </button>

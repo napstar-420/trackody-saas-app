@@ -1,0 +1,67 @@
+$light-colors: (
+    100: #ffffff,
+    150: #fcfbf9,
+    200: #fbfaf7,
+    250: #faf9f6,
+    300: #f9f8f5,
+    350: #f9f7f3,
+    400: #f8f6f2,
+    450: #dfddda,
+    500: #c6c5c2,
+    550: #aeaca9,
+    600: #959491,
+    650: #7c7b79,
+    700: #636261,
+    750: #4a4a49,
+    800: #323130,
+    850: #191918,
+    900: #000000,
+);
+
+$dark-colors: (
+    100: #0c0c12,
+    150: #0f0f17,
+    200: #12121b,
+    250: #15151f,
+    300: #181824,
+    350: #1b1b29,
+    400: #1e1e2d,
+    450: #353542,
+    500: #4b4b57,
+    550: #62626c,
+    600: #787881,
+    650: #8f8f96,
+    700: #a5a5ab,
+    750: #bcbcc0,
+    800: #d2d2d5,
+    850: #e9e9ea,
+    900: #ffffff,
+);
+
+.light {
+    @each $value, $color in $light-colors {
+        .text-theme-#{$value} {
+            color: $color;
+        }
+        .bg-theme-#{$value} {
+            background-color: $color;
+        }
+        .border-theme-#{$value} {
+            border-color: $color;
+        }
+    }
+}
+
+.dark {
+    @each $value, $color in $dark-colors {
+        .text-theme-#{$value} {
+            color: $color;
+        }
+        .bg-theme-#{$value} {
+            background-color: $color;
+        }
+        .border-theme-#{$value} {
+            border-color: $color;
+        }
+    }
+}

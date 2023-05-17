@@ -6,11 +6,11 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom';
-import './index.css';
-import Login from './pages/login';
-import ErrorPage from './errorPage';
-import SignUp from './pages/signup.jsx';
-import ForgotPassword from './pages/forgotPassword';
+import './css/index.css';
+import Login from './pages/authentication/login';
+import ErrorPage from './pages/error/index';
+import SignUp from './pages/authentication/signup';
+import ForgotPassword from './pages/authentication/forgotPassword';
 import AdminRoot from './pages/admin/root.jsx';
 import AdminDashboard from './pages/admin/dashboard.jsx'
 import ThemeProvider from './themeProvider';

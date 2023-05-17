@@ -2,9 +2,9 @@ import React, { useState, useEffect, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import { IoCheckbox } from 'react-icons/io5';
-import WelcomePanel from '../components/welcomePanel';
-import AuthFooter from '../components/authFooter';
-import ThemeContext from '../themeContext';
+import WelcomePanel from '../../components/welcomePanel';
+import AuthFooter from '../../components/authFooter';
+import ThemeContext from '../../themeContext';
 
 export default function SignUp() {
   const { theme } = useContext(ThemeContext);
@@ -91,25 +91,25 @@ export default function SignUp() {
   return (
     <div className={`${theme} max-w-screen min-h-screen lg:h-screen grid grid-rows-[auto_1fr] lg:grid-rows-none grid-cols-1 xl:grid-cols-[auto_1fr] lg:grid-cols-[1fr_1fr]`}>
       <WelcomePanel />
-      <div className='bg-white dark:bg-dark_600 h-full overflow-x-hidden overflow-y-auto flex justify-center lg:grid place-items-center pt-10 lg:pt-20 pb-8'>
+      <div className='h-full overflow-x-hidden overflow-y-auto flex justify-center lg:grid place-items-center pt-10 lg:pt-20 pb-8'>
         <div className='px-8'>
-          <h1 className='text-light_text dark:text-white text-2xl font-medium mb-2 text-center'>
+          <h1 className='text-2xl font-medium mb-2 text-center'>
             Create an Account
           </h1>
-          <p className='text-light_600 dark:text-dark_300 font-medium mb-8 text-center'>
+          <p className='font-medium mb-8 text-center'>
             Already have an account?{' '}
-            <NavLink to={'/'} className='text-primary font-semibold'>
+            <NavLink to={'/'} className='font-semibold'>
               Sign in here
             </NavLink>
           </p>
-          <button className='bg-primary bg-opacity-20 text-[0.82rem] font-[500] w-full px-4 py-[0.65rem] rounded-lg text-primary flex items-center justify-center gap-[10px] hover:text-white hover:bg-primary transition-colors'>
+          <button className='bg-opacity-20 text-[0.82rem] font-[500] w-full px-4 py-[0.65rem] rounded-lg flex items-center justify-center gap-[10px] hover:text-white transition-colors'>
             <FcGoogle className='text-2xl' />
             Sign in with Google
           </button>
           <div className='my-8 flex items-center gap-2'>
-            <div className='grow bg-light_600 dark:bg-dark_400 h-[0.5px]'></div>
-            <div className='text-light_600 dark:text-dark_400 text-sm'>OR</div>
-            <div className='grow bg-light_600 dark:bg-dark_400 h-[0.5px]'></div>
+            <div className='grow h-[0.5px]'></div>
+            <div className='text-sm'>OR</div>
+            <div className='grow h-[0.5px]'></div>
           </div>
           <form
             action=''
@@ -185,14 +185,14 @@ export default function SignUp() {
                   return (
                     <div
                       className={`h-[5px] grow rounded-lg ${
-                        passwordPower < index ? 'bg-light_500 dark:bg-dark_300' : 'bg-lime-400'
+                        passwordPower < index ? '' : 'bg-lime-400'
                       }`}
                       key={i}
                     ></div>
                   );
                 })}
               </div>
-              <p className='text-light_600 dark:text-dark_300 text-sm'>
+              <p className='text-sm'>
                 Use 8 or more characters with a mix of letters, numbers &
                 symbols.
               </p>
@@ -215,7 +215,7 @@ export default function SignUp() {
               <div className='flex w-max flex-row-reverse items-start mt-4'>
                 <label
                   htmlFor='t_and_c'
-                  className='text-light_800 dark:text-dark_200 relative top-[1px]'
+                  className='relative top-[1px]'
                 >
                   I Agree&nbsp;
                   <NavLink
@@ -227,9 +227,9 @@ export default function SignUp() {
                 </label>
                 <div className='mr-2 w-6 h-6 relative'>
                   {isTermsChecked ? (
-                    <IoCheckbox className='absolute top-0 left-0 text-primary text-2xl' />
+                    <IoCheckbox className='absolute top-0 left-0 text-2xl' />
                   ) : (
-                    <div className='absolute top-0 left-0 w-full h-full bg-light_400 dark:bg-dark_300 rounded' />
+                    <div className='absolute top-0 left-0 w-full h-full rounded' />
                   )}
                   <input
                     type='checkbox'
@@ -244,7 +244,7 @@ export default function SignUp() {
                 </div>
               </div>
             </div>
-              <button className='px-6 py-3 bg-primary hover:bg-primary_darken text-white font-medium rounded-lg m-auto transition-colors'>
+              <button className='px-6 py-3 text-white font-medium rounded-lg m-auto transition-colors'>
                 Submit
               </button>
           </form>
